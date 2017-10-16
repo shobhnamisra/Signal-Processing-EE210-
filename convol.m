@@ -25,5 +25,6 @@ for i = 1:N+M-1
     end
 end
 
-
+plot(-length(aa)/2:length(aa)/2 - 1, aa, 'r');
+xlim([-length(aa)/2 length(aa)/2]);
 
