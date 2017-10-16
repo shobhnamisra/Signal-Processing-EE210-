@@ -12,6 +12,7 @@ else
 end
 
 hh = zeros(1,N+M-1);
+
 for i = 1:N
     for j = 1:M
         if i-j > 0
@@ -24,7 +25,5 @@ for i = 1:N
 end
 
 ii = -N/2:(N/2 - 1);
-
-plot(ii, hh/max(hh), 'b'); hold on;
 
 
