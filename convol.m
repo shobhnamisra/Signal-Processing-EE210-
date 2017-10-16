@@ -18,6 +18,6 @@ end
 
 ii = -N/2:(N/2 - 1);
 
-plot(ii, hh, 'b'); hold on;
+plot(ii, hh/max(hh), 'b'); hold on;
 
 
