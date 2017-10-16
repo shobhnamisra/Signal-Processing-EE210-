@@ -17,13 +17,14 @@ end
 hh = zeros(1,N+M-1);
 
 for i = 1:N+M-1
-    for j = 1:M
-        if i-j > 0
-            hh(i) = hh(i) + f(j)*g(i-j);
-        
-        else
-            hh(i)= hh(i) + f(j)*g(i-j+N);
-        end
+    sum = 0;
+    if i <= N
+        sum = sum + f(1,N+1-i:N).*aa(1,1:i);
+        hh(i) = sum;
+    else
+        j = i-N;
+        sum = sum + f(1, 1:N-j).*aa(1,j+1:length(aa));
+        hh(i) = sum;
     end
 end
 
