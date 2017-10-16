@@ -27,6 +27,5 @@ for i = 1:N+M-1
     end
 end
 
-ii = -N/2:(N/2 - 1);
 
 
