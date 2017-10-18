@@ -9,19 +9,19 @@ N = length(f);
 M = length(g);
 
 if N > M
-    aa = [zeros(1, N-M) aa];
+    aa = [aa zeros(1, N-M)];
 else
-    aa = [zeros(1, M-N) aa];
+    aa = [aa zeros(1, M-N)];
 end
 
 hh = zeros(1,N+M-1);
 
 for i = 1:N+M-1
     if i <= N
-        hh(i) = sum(f(N+1-i:N,1).*aa(1:i,1));
+        hh(i) = sum(f(N+1-i:N).*aa(1,1:i));
     else
         j = i-N;
-        hh(i) = sum(f(1:N-j,1).*aa(j+1:length(aa),1));
+        hh(i) = sum(f(1, 1:N-j).*aa(1,j+1:length(aa)));
     end
 end
 
