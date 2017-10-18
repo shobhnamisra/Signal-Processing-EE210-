@@ -25,16 +25,13 @@ Z = size(x,1);
 
 %sound(x,Fs)
 N = 9; 
-%x = getaudiodata(mymic);
-% x = 1:50;
 
-% Z=50;
 
 % figure(1);
 % plot(x(:,1));
 
 %%%%%filter 1%%%%%
-% h(1:N) = 1/N;
+h(1:N) = 1/N;
 
 %%%%filter 2%%%%
 % for i = 0:(N-1)/2
@@ -45,9 +42,9 @@ N = 9;
 % end 
 
 %%%%filter 3%%%%
-p = 0.9;
-h(1)=1+p;
-h(2)=-p;
+% p = 0.9;
+% h(1)=1+p;
+% h(2)=-p;
 
     
 y = zeros(Z,1);
@@ -73,7 +70,6 @@ for n = (Z-N+1):Z
     end
     y(n) = (y(n)) / 2;
 end
-
 
 figure(2);
 plot(y);

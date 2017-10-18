@@ -10,7 +10,7 @@ global h
 %parameters
 A = 4;
 B = 2;
-Tf = 20;
+Tf = 300;
 h = 0.1;
 w1 = .2; 
 w2 = .1;
