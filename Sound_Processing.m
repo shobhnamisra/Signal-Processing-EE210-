@@ -1,23 +1,4 @@
-% [y,Fs] = audioread('1.mp3');
-% 
-% %sound(y,Fs) %play sound
-% 
-% %t = 0:0.001:1
-% 
-% m=5;
-% 
-% % for i = 0:m-1
-% %     imp(i+1) = 1/m;
-% % end    
-% 
-% imp(1:m) = 1/m;
-% Z = size(y,1);
-% 
-% y1 = y(:,1);
-%        
-% y3 = convol(y1,imp);
-% %audiowrite('handel.wav',y1,Fs)
-% sound(y3,Fs) %play sound
+
 
 %%%%%%%%%%%
 [x,Fs] = audioread('1.mp3');
